@@ -31,7 +31,9 @@
 </head>
 <body>
 	<script type="text/javascript">    
-   		setTimeout(function(){ top.location.href = 'https://telus.my.salesforce.com' }, 5*60000); // 5 minutes
+   		setTimeout(function(){ 
+			window.parent.location.href = 'https://telus.my.salesforce.com?ts=' + Math.floor(Date.now() / 1000) 
+		}, 5*60000); // 5 minutes
 	</script>
 </body>
 </html>
